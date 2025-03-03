@@ -11,7 +11,7 @@ function CVForm() {
         generalInfo: {
             name: 'kelly cochran',
             email: 'kac1011@icloud.com',
-            phone: '8438225482'
+            phone: '8438675309'
         },
         education: [{
             id: 0,
@@ -76,11 +76,24 @@ function CVForm() {
     
     return (
         <>
-            <h1>cv form</h1>
-            <GeneralInfo data={cvData.generalInfo} onChange={handleGeneralInfoChange} editMode={editMode}/>
-            <Education data={cvData.education} onChange={handleEducationChange} editMode={editMode}/>
-            <Experience data={cvData.experience} onChange={handleExperienceChange} editMode={editMode}/>
-            {editMode ? <Submit onClick={toggleEditMode}/> : <Edit onClick={toggleEditMode}/>}
+            <div className="row mt-4">
+            <h1>cv application</h1>
+                <div className="col-9">
+                here's kelly's cv! press the edit button to modify the information, and submit to save it (locally, of course)
+                </div>
+                <div className="col-3 text-center">
+                    {editMode ? <Submit onClick={toggleEditMode}/> : <Edit onClick={toggleEditMode}/>}
+                </div>
+            </div>
+            <div className="row mt-3"> 
+                <GeneralInfo data={cvData.generalInfo} onChange={handleGeneralInfoChange} editMode={editMode}/>
+            </div>
+            <div className="row mt-3">
+                <Education data={cvData.education} onChange={handleEducationChange} editMode={editMode}/>
+            </div>
+            <div className="row mt-3">
+                <Experience data={cvData.experience} onChange={handleExperienceChange} editMode={editMode}/>
+            </div>
         </>
     )
 }

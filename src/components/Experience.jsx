@@ -1,7 +1,7 @@
 function Experience({data, onChange, editMode}) {
     return (
         <>
-            <h3>experience</h3>
+            <h4>experience</h4>
             {editMode ? ( 
                 data.map(exp => (
                     <div key={exp.id}>

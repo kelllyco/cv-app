@@ -1,7 +1,7 @@
 function GeneralInfo({data, onChange, editMode}) {
     return (
         <>
-            <h3>general info</h3>
+            <h4>general info</h4>
             {editMode ?
             <>
                 <div>

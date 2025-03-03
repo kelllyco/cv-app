@@ -1,7 +1,7 @@
 function Education({data, onChange, editMode}) {
     return (
         <>
-            <h3>education</h3>
+            <h4>education</h4>
             {editMode ? (
                     data.map(edu => (
                         <div key={edu.id}>

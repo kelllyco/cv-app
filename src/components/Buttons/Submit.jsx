@@ -1,6 +1,6 @@
 function Submit({onClick}) {
     return (
-        <button onClick={onClick}>submit</button>
+        <button onClick={onClick} className="btn btn-secondary">submit</button>
     );
 }
 
